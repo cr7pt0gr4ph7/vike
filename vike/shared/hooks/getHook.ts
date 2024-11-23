@@ -2,7 +2,7 @@ export { getHook }
 export { getHookFromPageConfig }
 export { getHookFromPageConfigGlobal }
 export { assertHook }
-export { getHook_setIsPrerenderering }
+export { getHook_setIsPrerendering }
 export type { Hook }
 export type { HookName }
 export type { HookLoc }
@@ -172,6 +172,6 @@ function getHookTimeoutDefault(hookName: HookName): HookTimeout {
     warning: 4 * 1000
   }
 }
-function getHook_setIsPrerenderering() {
+function getHook_setIsPrerendering() {
   globalObject.isPrerendering = true
 }
