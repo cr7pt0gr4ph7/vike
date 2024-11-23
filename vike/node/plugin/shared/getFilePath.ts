@@ -2,6 +2,12 @@ export { getFilePathResolved }
 export { getFilePathUnresolved }
 export { getFilePathAbsoluteUserRootDir }
 export { getFilePathToShowToUserFromUnknown }
+export {
+  /**
+   * @deprecated Import {@link getFilePathToShowToUserFromUnknown} instead.
+   */
+  getFilePathToShowToUserFromUnknown as getFilePathToShowToUserFromUnkown
+}
 export { getModuleFilePathAbsolute }
 export { getModuleFilePathRelative }
 export { cleanFilePathUnknown }
