@@ -11,6 +11,12 @@ export {
 export { getModuleFilePathAbsolute }
 export { getModuleFilePathRelative }
 export { cleanFilePathUnknown }
+export {
+  /**
+   * @deprecated Import {@link cleanFilePathUnknown} instead.
+   */
+  cleanFilePathUnknown as cleanFilePathUnkown
+}
 export { assertModuleId }
 
 import path from 'path'
@@ -28,9 +34,9 @@ function getFilePathResolved(
   args: {
     userRootDir: string
   } & (
-    | { filePathAbsoluteFilesystem: string; importPathAbsolute: string }
-    | { filePathAbsoluteUserRootDir: string; importPathAbsolute?: string }
-  )
+      | { filePathAbsoluteFilesystem: string; importPathAbsolute: string }
+      | { filePathAbsoluteUserRootDir: string; importPathAbsolute?: string }
+    )
 ): FilePathResolved {
   const { userRootDir } = args
 
@@ -147,11 +153,11 @@ function getFilePathRelative({
   } else {
     assert(
       !filePathRelativeUserRootDir.startsWith('/') &&
-        /* Not true if filePathRelative starts with a hidden directory  (i.e. a directory with a name that starts with `.`)
-        !filePathRelative.startsWith('.') &&
-        */
-        !filePathRelativeUserRootDir.startsWith('./') &&
-        !filePathRelativeUserRootDir.startsWith('../')
+      /* Not true if filePathRelative starts with a hidden directory  (i.e. a directory with a name that starts with `.`)
+      !filePathRelative.startsWith('.') &&
+      */
+      !filePathRelativeUserRootDir.startsWith('./') &&
+      !filePathRelativeUserRootDir.startsWith('../')
     )
     const filePathAbsoluteUserRootDir = `/${filePathRelativeUserRootDir}`
     assert(filePathAbsoluteUserRootDir === getFilePathAbsoluteUserRootDir2(filePathAbsoluteFilesystem, userRootDir))
