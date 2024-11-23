@@ -3,6 +3,12 @@ export { getHookFromPageConfig }
 export { getHookFromPageConfigGlobal }
 export { assertHook }
 export { getHook_setIsPrerendering }
+export {
+  /**
+   * @deprecated Import {@link getHook_setIsPrerendering} instead.
+   */
+  getHook_setIsPrerendering as getHook_setIsPrerenderering
+}
 export type { Hook }
 export type { HookName }
 export type { HookLoc }
