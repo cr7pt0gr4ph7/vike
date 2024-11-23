@@ -10,7 +10,7 @@ assertUsage(
 )
 
 export * from './index-common.js'
-export * from '../../types/index-dreprecated.js'
+export * from '../../types/index-deprecated.js'
 
 import { assertWarning } from './utils.js'
 import pc from '@brillout/picocolors'
