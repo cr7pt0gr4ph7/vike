@@ -826,6 +826,7 @@ async function getConfigValueSource(
       valueIsImportedAtRuntime: true,
       valueIsDefinedByPlusFile: false,
       isOverriden: isOverridden,
+      isOverridden,
       definedAtFilePath
     }
     return configValueSource
@@ -851,6 +852,7 @@ async function getConfigValueSource(
         valueIsImportedAtRuntime: true,
         valueIsDefinedByPlusFile: false,
         isOverriden: isOverridden,
+        isOverridden,
         definedAtFilePath: pointerImport
       }
       // Load pointer import
@@ -879,6 +881,7 @@ async function getConfigValueSource(
       valueIsImportedAtRuntime: false,
       valueIsDefinedByPlusFile: false,
       isOverriden: isOverridden,
+      isOverridden
       definedAtFilePath: definedAtFilePath_
     }
     return configValueSource
@@ -894,6 +897,7 @@ async function getConfigValueSource(
       valueIsImportedAtRuntime: !valueAlreadyLoaded,
       valueIsDefinedByPlusFile: true,
       isOverriden: isOverridden,
+      isOverridden,
       definedAtFilePath: {
         ...interfaceFile.filePath,
         fileExportPathToShowToUser:
