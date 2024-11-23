@@ -13,7 +13,7 @@ export { getPrettyErrMessage }
 
 import pc from '@brillout/picocolors'
 import { assert, escapeRegex, isObject, removeEmptyLines, stripAnsi } from '../../utils.js'
-import { cleanFilePathUnkown, getFilePathToShowToUserFromUnkown } from '../getFilePath.js'
+import { cleanFilePathUnkown, getFilePathToShowToUserFromUnknown } from '../getFilePath.js'
 
 // Subset of RollupError
 type ErrorWithCodeSnippet = { id: string; frame?: string; message?: string; plugin?: string }
@@ -59,7 +59,7 @@ function getPrettyErrorWithCodeSnippet(err: ErrorWithCodeSnippet, userRootDir: s
 
   const msgFirstLine = [
     pc.red('Failed to transpile'),
-    pc.bold(pc.red(getFilePathToShowToUserFromUnkown(id, userRootDir))),
+    pc.bold(pc.red(getFilePathToShowToUserFromUnknown(id, userRootDir))),
     pc.red('because:')
   ].join(' ')
 

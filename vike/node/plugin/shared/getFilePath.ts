@@ -1,7 +1,7 @@
 export { getFilePathResolved }
 export { getFilePathUnresolved }
 export { getFilePathAbsoluteUserRootDir }
-export { getFilePathToShowToUserFromUnkown }
+export { getFilePathToShowToUserFromUnknown }
 export { getModuleFilePathAbsolute }
 export { getModuleFilePathRelative }
 export { cleanFilePathUnkown }
@@ -182,7 +182,7 @@ function assertModuleId(moduleId: string) {
   assertFilePathAbsoluteFilesystem(moduleId) // Can moduleId be something else than the filesystem absolute path?
 }
 
-function getFilePathToShowToUserFromUnkown(
+function getFilePathToShowToUserFromUnknown(
   // We don't have any guarantee about filePath, e.g. about whether is filePathAbsoluteFilesystem or filePathAbsoluteUserRootDir
   filePathUnknown: string,
   userRootDir: string
