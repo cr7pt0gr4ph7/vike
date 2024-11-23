@@ -8,7 +8,7 @@ import {
   resolveOutDir,
   viteIsSSR,
   addOnBeforeLogHook,
-  removeFileExtention,
+  removeFileExtension,
   unique,
   assertUsage,
   injectRollupInputs,
@@ -242,7 +242,7 @@ function getEntryFromClientEntry(clientEntry: string, config: ResolvedConfig, ad
 
   let entryName = filePathAbsoluteUserRootDir
   if (addExtractAssetsQuery) entryName = extractAssetsAddQuery(entryName)
-  entryName = removeFileExtention(entryName)
+  entryName = removeFileExtension(entryName)
   entryName = prependEntriesDir(entryName)
 
   return { entryName, entryTarget }
